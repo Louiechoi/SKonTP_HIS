@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>자동 리다이렉트</title>
+  <script>
+    window.onload = function () {
+      // 현재 경로의 마지막 부분(예: /최정필)
+      const name = decodeURIComponent(window.location.pathname.split("/").pop());
+
+      // 기본 구글폼 주소
+      const base = "https://docs.google.com/forms/d/e/1FAIpQLSecgnG7p7ME4aWM9QDywiZ6nwfZ7r30MS5VCa7gr9Y97Psxzw/viewform?usp=header";
+
+      // 설문 URL 만들기
+      const url = `${base}&entry.527622339=${name}&entry.118173676=SKBA`;
+
+      // 리다이렉트 실행
+      window.location.href = url;
+    };
+  </script>
+</head>
+<body>
+  <p>구글폼으로 이동 중입니다... 잠시만 기다려주세요.</p>
+</body>
+</html>
